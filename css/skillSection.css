@@ -99,6 +99,47 @@
   text-align: center;
 }
 
+
+
+.soft-skills-wrapper .skill-card svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 20px;
+  color: var(--accent-primary);
+}
+
+
+
+.skills-divider {
+  width: 100%;
+  margin: 90px 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.skills-divider::before,
+.skills-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.skills-divider span {
+  margin: 0 20px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  background: var(--bg-card);
+}
+
+
 @keyframes scroll-left {
   from {
     transform: translateX(0);
@@ -186,6 +227,15 @@
   .skills-marquee-container::after {
     width: 50px;
   }
+
+  
+.soft-skills-wrapper .skill-card svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 20px;
+  color: var(--accent-primary);
+}
+
 }
 
 @media (max-width: 480px) {
@@ -213,81 +263,3 @@
   }
 }
 
-.soft-skills-marquee {
-  overflow: hidden;
-  position: relative;
-}
-
-.soft-skills-row {
-  display: flex;
-  gap: 40px;
-  padding: 40px 0;
-  width: max-content;
-  animation: scroll-right 60s linear infinite;
-}
-
-.soft-skills-row:hover {
-  animation-play-state: paused;
-}
-
-
-.soft-skill-card {
-  min-width: 180px;
-  padding: 24px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  transition: all 0.4s ease;
-}
-
-.soft-skill-card:hover {
-  transform: translateY(-10000px);
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 10px rgba(254, 70, 46, 0.3);
-}
-
-.soft-skill-card svg {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 12px;
-  color: var(--accent-primary);
-}
-
-.soft-skill-card span {
-  font-weight: 600;
-  font-size: 15px;
-}
-
-
-.skills-divider {
-  width: 100%;
-  margin: 90px 0 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.skills-divider::before,
-.skills-divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--border-color);
-}
-
-.skills-divider span {
-  margin: 0 20px;
-  padding: 8px 18px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--text-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 30px;
-  background: var(--bg-card);
-}
