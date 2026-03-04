@@ -7,18 +7,23 @@ function initSmoothScrolling() {
         easing: t => 1 - Math.pow(1 - t, 5),
         direction: 'vertical',
         gestureDirection: 'vertical',
+
         smooth: true,
-        mouseMultiplier: 1.4,
-        smoothTouch: true,
-        touchMultiplier: 3.0,
+        mouseMultiplier: 1.1,
+        smoothTouch: false,
+        touchMultiplier: 1.2,
+
         infinite: false,
         normalizeWheel: true
     });
 
     lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.add(time => lenis.raf(time * 1000));
-    gsap.ticker.lagSmoothing(0);
+    gsap.ticker.add(time => {
+        lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(500, 33);
 
     setupEnhancedScrollAnimations();
 
@@ -74,23 +79,40 @@ function setupEnhancedScrollAnimations() {
 
 
 function animateProjects() {
-      document.querySelectorAll('.project-card').forEach((item, i) => {
+
+    document.querySelectorAll('.project-card').forEach((item, i) => {
+
         gsap.set(item, {opacity:1, y:0, scale:1});
 
         gsap.from(item, {
-            scrollTrigger: {trigger:item, start:"top 85%", toggleActions:"play none none none"},
-            duration:0.6, y:20, opacity:0, delay:i*0.12, ease:"power2.out"
+            scrollTrigger: {
+                trigger:item,
+                start:"top 85%",
+                toggleActions:"play none none none"
+            },
+            duration:0.6,
+            y:20,
+            opacity:0,
+            delay:i*0.12,
+            ease:"power2.out"
         });
 
-        item.addEventListener('mouseenter', () => gsap.to(item, {y:-15, rotationY:5, duration:0.4, ease:"power2.out"}));
-        item.addEventListener('mouseleave', () => gsap.to(item, {y:0, rotationY:0, duration:0.4, ease:"power2.out"}));
+        item.addEventListener('mouseenter', () =>
+            gsap.to(item,{y:-15, rotationY:5, duration:0.4, ease:"power2.out"})
+        );
+
+        item.addEventListener('mouseleave', () =>
+            gsap.to(item,{y:0, rotationY:0, duration:0.4, ease:"power2.out"})
+        );
+
     });
 
 }
 
+
 function animateSkills() {
 
-      const skills = gsap.utils.toArray('.skill-card, .soft-skill-card');
+    const skills = gsap.utils.toArray('.skill-card, .soft-skill-card');
 
     skills.forEach((card, i) => {
 
@@ -100,16 +122,17 @@ function animateSkills() {
                 start: "top 80%",
                 once: true
             },
-            y: 20,
-            opacity: 0,
-            duration: 0.3,
-            delay: i * 0.05,
-            ease: "power3.out"
+            y:20,
+            opacity:0,
+            duration:0.3,
+            delay:i*0.05,
+            ease:"power3.out"
         });
 
     });
 
 }
+
 
 function initScrollAnimations() {
 
@@ -120,11 +143,11 @@ function initScrollAnimations() {
                 trigger: section,
                 start: "top 85%"
             },
-            duration: 0.8,
-            y: 40,
-            opacity: 0,
-            stagger: 0.1,
-            ease: "power2.out"
+            duration:0.8,
+            y:40,
+            opacity:0,
+            stagger:0.1,
+            ease:"power2.out"
         });
 
     });
@@ -147,7 +170,7 @@ function initScrollAnimations() {
 
 
     gsap.utils.toArray('.testimonial-card, .contact-item, .timeline-item')
-    .forEach((el, i) => {
+    .forEach((el,i)=>{
 
         gsap.from(el,{
             scrollTrigger:{
@@ -164,20 +187,21 @@ function initScrollAnimations() {
     });
 
 
+    gsap.utils.toArray('.stat-item').forEach((stat,i)=>{
 
-    gsap.utils.toArray('.stat-item').forEach((stat, i) => {
-        gsap.from(stat, {
-            scrollTrigger: {
+        gsap.from(stat,{
+            scrollTrigger:{
                 trigger: stat,
-                start: "top 80%",
-                toggleActions: "play none none none"
+                start:"top 80%",
+                toggleActions:"play none none none"
             },
-            duration: 0.8,
-            scale: 0.8,
-            opacity: 0,
-            delay: i * 0.1,
-            ease: "back.out(1.7)"
+            duration:0.8,
+            scale:0.8,
+            opacity:0,
+            delay:i*0.1,
+            ease:"back.out(1.7)"
         });
+
     });
 
 }

@@ -33,6 +33,7 @@ function initInteractiveElements() {
 
 function addHoverEffects() {
 
+    if (window.matchMedia("(hover: none)").matches) return;
     document.querySelectorAll('.skill-card,.soft-skill-card,.project-card,.contact-item').forEach(el => {
 
         el.addEventListener('mouseenter', () => gsap.to(el, { y: -10, duration: 0.3 }));
