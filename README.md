@@ -10,7 +10,7 @@ The project demonstrates expertise in **frontend engineering, animation systems,
 # 🌐 Live Demo
 
 🔗 Portfolio Website  
-https://your-portfolio-link.com
+https://karan1674.github.io/Karanjit-Singh-Portfolio/
 
 ---
 
