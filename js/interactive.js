@@ -91,20 +91,86 @@ function initProjectFiltering() {
 
     const btns = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.project-gallery .projects-grid .project-card');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
 
     if (!btns.length || !cards.length) return;
+
+    let currentFilter = "all";
+    let visibleCount = 6;
+
+    function updateProjects() {
+
+        const matching = [];
+        const nonMatching = [];
+
+        cards.forEach(card => {
+
+            const category = card.dataset.category;
+            const show = currentFilter === 'all' || category === currentFilter;
+
+            if (show) matching.push(card);
+            else nonMatching.push(card);
+
+        });
+
+        const visibleCards = matching.slice(0, visibleCount);
+        const hiddenCards = matching.slice(visibleCount);
+
+        const tl = gsap.timeline();
+
+        if (nonMatching.length) {
+            tl.to(nonMatching, {
+                opacity: 0,
+                y: -20,
+                scale: 0.95,
+                duration: 0.25,
+                stagger: 0.05,
+                ease: "power2.in",
+                onComplete: () => {
+                    nonMatching.forEach(c => c.style.display = 'none');
+                }
+            });
+        }
+
+        hiddenCards.forEach(c => c.style.display = 'none');
+
+        visibleCards.forEach(c => c.style.display = 'flex');
+
+        tl.fromTo(
+            visibleCards,
+            {
+                opacity: 0,
+                y: 30,
+                scale: 0.95
+            },
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.4,
+                stagger: 0.08,
+                ease: "power3.out"
+            },
+            "-=0.1"
+        );
+
+        if (matching.length > visibleCount) {
+            loadMoreBtn.style.display = "inline-flex";
+        } else {
+            loadMoreBtn.style.display = "none";
+        }
+
+    }
 
     btns.forEach(b => {
 
         b.addEventListener('click', () => {
 
-            const filter = b.dataset.filter;
             btns.forEach(bb => {
                 bb.classList.remove('active');
                 gsap.to(bb, {
                     scale: 1,
-                    duration: 0.2,
-                    ease: "power2.out"
+                    duration: 0.2
                 });
             });
 
@@ -116,64 +182,24 @@ function initProjectFiltering() {
                 ease: "back.out(1.7)"
             });
 
+            currentFilter = b.dataset.filter;
+            visibleCount = 6;
 
-            const matching = [];
-            const nonMatching = [];
-
-            cards.forEach(card => {
-
-                const category = card.dataset.category;
-                const show = filter === 'all' || category === filter;
-
-                if (show) matching.push(card);
-                else nonMatching.push(card);
-
-            });
-
-
-            const tl = gsap.timeline();
-            if (nonMatching.length > 0) {
-
-                tl.to(nonMatching, {
-                    opacity: 0,
-                    y: -20,
-                    scale: 0.95,
-                    duration: 0.25,
-                    stagger: 0.05,
-                    ease: "power2.in",
-                    onComplete: () => {
-                        nonMatching.forEach(c => c.style.display = 'none');
-                    }
-                });
-            }
-            matching.forEach(c => {
-                c.style.display = 'flex';
-            });
-
-
-            tl.fromTo(
-                matching,
-                {
-                    opacity: 0,
-                    y: 30,
-                    scale: 0.95
-                },
-                {
-                    opacity: 1,
-                    y: 0,
-                    scale: 1,
-                    duration: 0.4,
-                    stagger: 0.08,
-                    ease: "power3.out"
-                },
-                "-=0.1"
-            );
+            updateProjects();
 
         });
 
     });
 
+    loadMoreBtn.addEventListener("click", () => {
+        visibleCount += 6;
+        updateProjects();
+    });
+
+    updateProjects();
+
 }
+
 
 function updateCopyrightYear() {
     const yearElement = document.getElementById('copyright-year');
