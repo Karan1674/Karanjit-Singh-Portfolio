@@ -1,1799 +1,2232 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karanjit Singh - Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Karanjit Singh is a Full Stack Developer specializing in modern web technologies including React, JavaScript, and responsive UI design. Passionate about building scalable, user-focused web applications and innovative digital solutions. Available for freelance and collaborative projects."
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karanjit Singh - Full Stack Developer</title>
-  <meta name="description"
-    content="Karanjit Singh is a Full Stack Developer specializing in modern web technologies including React, JavaScript, and responsive UI design. Passionate about building scalable, user-focused web applications and innovative digital solutions. Available for freelance and collaborative projects." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  <!-- Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-  <!-- Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/heroSection.css" />
+    <link rel="stylesheet" href="css/aboutSection.css" />
+    <link rel="stylesheet" href="css/skillSection.css" />
+    <link rel="stylesheet" href="css/timelineSection.css" />
+    <link rel="stylesheet" href="css/workSection.css" />
+    <link rel="stylesheet" href="css/testimonialSection.css" />
+    <link rel="stylesheet" href="css/contactSection.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/preloader.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/heroSection.css" />
-  <link rel="stylesheet" href="css/aboutSection.css" />
-  <link rel="stylesheet" href="css/skillSection.css" />
-  <link rel="stylesheet" href="css/timelineSection.css" />
-  <link rel="stylesheet" href="css/workSection.css" />
-  <link rel="stylesheet" href="css/testimonialSection.css" />
-  <link rel="stylesheet" href="css/contactSection.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-</head>
-
-<body class="loading">
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="loading-animation">
-      <div class="advanced-loader">
-        <div class="loader-orbit"></div>
-        <div class="loader-orbit"></div>
-        <div class="loader-orbit"></div>
-        <div class="loader-center"></div>
-        <div class="loader-particles"></div>
-        <div class="loader-particles"></div>
-        <div class="loader-particles"></div>
-        <div class="loader-particles"></div>
-      </div>
-      <div class="loading-text">Karanjit Singh</div>
-      <div class="loading-subtitle">Full Stack Developer</div>
-      <div class="loading-progress">
-        <div class="progress-bar"></div>
-        <div class="progress-glow"></div>
+  <body class="loading">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loading-animation">
+        <div class="advanced-loader">
+          <div class="loader-orbit"></div>
+          <div class="loader-orbit"></div>
+          <div class="loader-orbit"></div>
+          <div class="loader-center"></div>
+          <div class="loader-particles"></div>
+          <div class="loader-particles"></div>
+          <div class="loader-particles"></div>
+          <div class="loader-particles"></div>
+        </div>
+        <div class="loading-text">Karanjit Singh</div>
+        <div class="loading-subtitle">Full Stack Developer</div>
+        <div class="loading-progress">
+          <div class="progress-bar"></div>
+          <div class="progress-glow"></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Particle Cursor -->
-  <div class="particle-cursor"></div>
+    <!-- Particle Cursor -->
+    <div class="particle-cursor"></div>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">Karanjit Singh</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">Karanjit Singh</a>
 
-      <div class="nav-links">
-        <div class="nav-menu" id="navMenu">
-          <a href="#home" class="nav-link active">
-            <i data-lucide="home"></i>
-            <span>Home</span>
-          </a>
-          <a href="#about" class="nav-link">
-            <i data-lucide="user"></i>
-            <span>About</span>
-          </a>
-          <a href="#projects" class="nav-link">
-            <i data-lucide="code"></i>
-            <span>Projects</span>
-          </a>
-          <a href="#freelance" class="nav-link">
-            <i data-lucide="briefcase"></i>
-            <span>Freelance</span>
-          </a>
-          <a href="#contact" class="nav-link">
-            <i data-lucide="mail"></i>
-            <span>Contact</span>
-          </a>
-        </div>
+        <div class="nav-links">
+          <div class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link active">
+              <i data-lucide="home"></i>
+              <span>Home</span>
+            </a>
+            <a href="#about" class="nav-link">
+              <i data-lucide="user"></i>
+              <span>About</span>
+            </a>
+            <a href="#projects" class="nav-link">
+              <i data-lucide="code"></i>
+              <span>Projects</span>
+            </a>
+            <a href="#freelance" class="nav-link">
+              <i data-lucide="briefcase"></i>
+              <span>Freelance</span>
+            </a>
+            <a href="#contact" class="nav-link">
+              <i data-lucide="mail"></i>
+              <span>Contact</span>
+            </a>
+          </div>
 
-        <div class="nav-actions">
-          <div class="theme-controls">
-            <button class="theme-toggle" id="themeToggle">
-              <i class="theme-icon" data-lucide="sun"></i>
+          <div class="nav-actions">
+            <div class="theme-controls">
+              <button class="theme-toggle" id="themeToggle">
+                <i class="theme-icon" data-lucide="sun"></i>
+              </button>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileToggle">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
             </button>
           </div>
-
-          <button class="mobile-menu-toggle" id="mobileToggle">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="professional-badge">
-          <i data-lucide="zap" style="color: #fe462e"></i>
-          <span>Available for Projects</span>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="professional-badge">
+            <i data-lucide="zap" style="color: #fe462e"></i>
+            <span>Available for Projects</span>
+          </div>
+
+          <h1 class="hero-title">
+            Full Stack <span class="accent-highlight">Developer</span><br />
+            Crafting Scalable Digital Solutions
+          </h1>
+
+          <p class="hero-description">
+            I build modern, high-performance web applications using cutting-edge
+            technologies, delivering scalable architectures and seamless user
+            experiences that drive real business growth.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn-primary" onclick="downloadResume()">
+              <span>Download Resume</span>
+              <i data-lucide="download"></i>
+            </a>
+            <a href="#contact" class="btn-outline">
+              <span>Start Project</span>
+              <i data-lucide="message-circle"></i>
+            </a>
+          </div>
         </div>
 
-        <h1 class="hero-title">
-          Full Stack <span class="accent-highlight">Developer</span><br />
-          Crafting Scalable Digital Solutions
-        </h1>
+        <div class="hero-visual">
+          <canvas id="hero-canvas" class="model-canvas"></canvas>
+          <div class="floating-elements">
+            <div class="tech-stack">React.js</div>
+            <div class="tech-stack">Node.js</div>
+            <div class="tech-stack">Express.js</div>
+            <div class="tech-stack">MongoDB</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <p class="hero-description">
-          I build modern, high-performance web applications using cutting-edge
-          technologies, delivering scalable architectures and seamless user
-          experiences that drive real business growth.
-        </p>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="professional-badge-section">About Me</div>
+          <h2 class="section-title">Building Modern Web Experiences</h2>
+          <p class="section-subtitle">
+            Passionate Full Stack Developer focused on scalable solutions and
+            continuous learning
+          </p>
+        </div>
 
-        <div class="hero-buttons">
-          <a href="#" class="btn-primary" onclick="downloadResume()">
-            <span>Download Resume</span>
-            <i data-lucide="download"></i>
-          </a>
-          <a href="#contact" class="btn-outline">
-            <span>Start Project</span>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="profile-container">
+              <img
+                src="images/Karanjit_Portfolio_Image.jpeg"
+                alt="Karanjit Singh - Full Stack Developer"
+                class="profile-image"
+              />
+            </div>
+          </div>
+
+          <div class="about-text">
+            <p class="about-description">
+              I'm a dedicated Full Stack Developer currently pursuing B.Tech in
+              Computer Science Engineering. I specialize in the MERN stack and
+              modern web technologies, building responsive and scalable
+              applications that solve real-world problems. My approach combines
+              strong fundamentals, clean architecture, and continuous learning
+              to create impactful digital solutions.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-item">
+                <span
+                  class="stat-number counter"
+                  data-target="25"
+                  data-suffix="+"
+                  >0</span
+                >
+                <span class="stat-label">Projects Built</span>
+              </div>
+
+              <div class="stat-item">
+                <span
+                  class="stat-number counter"
+                  data-target="10"
+                  data-suffix="+"
+                  >0</span
+                >
+                <span class="stat-label">Technologies Explored</span>
+              </div>
+
+              <div class="stat-item">
+                <span class="stat-number counter" data-target="9.26">0.00</span>
+                <span class="stat-label">Current CGPA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="professional-badge-section">Skills & Expertise</div>
+          <h2 class="section-title">Skill Arsenal</h2>
+          <p class="section-subtitle">
+            Modern full-stack technologies, programming expertise and
+            professional strengths
+          </p>
+        </div>
+      </div>
+
+      <div class="skills-divider">
+        <span>Technical Skills</span>
+      </div>
+
+      <div class="skills-marquee-container">
+        <div class="skills-marquee-row">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/html5.svg"
+                alt="HTML5"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">HTML5</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/css3.svg"
+                alt="CSS3"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">CSS3</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/javascript.svg"
+                alt="JavaScript"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">JavaScript</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/typescript.svg"
+                alt="TypeScript"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">TypeScript</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/react.svg"
+                alt="React"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">React</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/nextjs.svg"
+                alt="Next.js"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Next.js</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/redux.svg"
+                alt="Redux"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Redux</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/tailwindcss.svg"
+                alt="Tailwind CSS"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Tailwind CSS</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/shadcn.png"
+                alt="ShadCN UI"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">ShadCN UI</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/html5.svg"
+                alt="HTML5"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">HTML5</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/css3.svg"
+                alt="CSS3"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">CSS3</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/javascript.svg"
+                alt="JavaScript"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">JavaScript</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/typescript.svg"
+                alt="TypeScript"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">TypeScript</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/react.svg"
+                alt="React"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">React</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/nextjs.svg"
+                alt="Next.js"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Next.js</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/redux.svg"
+                alt="Redux"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Redux</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/tailwindcss.svg"
+                alt="Tailwind CSS"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Tailwind CSS</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/shadcn.png"
+                alt="ShadCN UI"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">ShadCN UI</span>
+          </div>
+        </div>
+
+        <div class="skills-marquee-row reverse">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/nodejs.svg"
+                alt="Nodejs"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Node.js</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./images/skillIcons/php.svg" alt="PHP" loading="lazy" />
+            </div>
+            <span class="skill-name-display">PHP</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/express.svg"
+                alt="Express"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Express</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/mongodb.svg"
+                alt="MongoDB"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">MongoDB</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/mysql.svg"
+                alt="MYSQL"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">MySQL</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/sass.svg"
+                alt="Sass"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Sass</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/bootstrap.svg"
+                alt="Bootstrap"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Bootstrap</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./images/skillIcons/ejs.svg" alt="EJS" loading="lazy" />
+            </div>
+            <span class="skill-name-display">EJS</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/nodejs.svg"
+                alt="Nodejs"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Node.js</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./images/skillIcons/php.svg" alt="PHP" loading="lazy" />
+            </div>
+            <span class="skill-name-display">PHP</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/express.svg"
+                alt="Express"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Express</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/mongodb.svg"
+                alt="MongoDB"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">MongoDB</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/mysql.svg"
+                alt="MYSQL"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">MySQL</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/sass.svg"
+                alt="Sass"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Sass</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/bootstrap.svg"
+                alt="Bootstrap"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Bootstrap</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./images/skillIcons/ejs.svg" alt="EJS" loading="lazy" />
+            </div>
+            <span class="skill-name-display">EJS</span>
+          </div>
+        </div>
+
+        <div class="skills-marquee-row">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./images/skillIcons/c.svg" alt="C" loading="lazy" />
+            </div>
+            <span class="skill-name-display">C</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/java.svg"
+                alt="Java"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Java</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/cplusplus.svg"
+                alt="C++"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">C++</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/python.svg"
+                alt="Python"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Python</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./images/skillIcons/git.svg" alt="Git" loading="lazy" />
+            </div>
+            <span class="skill-name-display">Git</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/github.svg"
+                alt="GitHub"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">GitHub</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./images/skillIcons/c.svg" alt="C" loading="lazy" />
+            </div>
+            <span class="skill-name-display">C</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/java.svg"
+                alt="Java"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Java</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/cplusplus.svg"
+                alt="C++"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">C++</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/python.svg"
+                alt="Python"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">Python</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="./images/skillIcons/git.svg" alt="Git" loading="lazy" />
+            </div>
+            <span class="skill-name-display">Git</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="./images/skillIcons/github.svg"
+                alt="GitHub"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name-display">GitHub</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-divider">
+        <span>Soft Skills</span>
+      </div>
+
+      <div class="soft-skills-wrapper">
+        <div class="skills-marquee-row reverse">
+          <div class="skill-card">
+            <i data-lucide="lightbulb"></i>
+            <span class="skill-name-display">Problem Solving</span>
+          </div>
+
+          <div class="skill-card">
+            <i data-lucide="users"></i>
+            <span class="skill-name-display">Team Collaboration</span>
+          </div>
+
+          <div class="skill-card">
             <i data-lucide="message-circle"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <canvas id="hero-canvas" class="model-canvas"></canvas>
-        <div class="floating-elements">
-          <div class="tech-stack">React.js</div>
-          <div class="tech-stack">Node.js</div>
-          <div class="tech-stack">Express.js</div>
-          <div class="tech-stack">MongoDB</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="professional-badge-section">About Me</div>
-        <h2 class="section-title">Building Modern Web Experiences</h2>
-        <p class="section-subtitle">
-          Passionate Full Stack Developer focused on scalable solutions and
-          continuous learning
-        </p>
-      </div>
-
-      <div class="about-content">
-        <div class="about-image">
-          <div class="profile-container">
-            <img src="images/Karanjit_Portfolio_Image.jpeg" alt="Karanjit Singh - Full Stack Developer"
-              class="profile-image" />
-          </div>
-        </div>
-
-        <div class="about-text">
-          <p class="about-description">
-            I'm a dedicated Full Stack Developer currently pursuing B.Tech in
-            Computer Science Engineering. I specialize in the MERN stack and
-            modern web technologies, building responsive and scalable
-            applications that solve real-world problems. My approach combines
-            strong fundamentals, clean architecture, and continuous learning
-            to create impactful digital solutions.
-          </p>
-
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-number counter" data-target="25" data-suffix="+">0</span>
-              <span class="stat-label">Projects Built</span>
-            </div>
-
-            <div class="stat-item">
-              <span class="stat-number counter" data-target="10" data-suffix="+">0</span>
-              <span class="stat-label">Technologies Explored</span>
-            </div>
-
-            <div class="stat-item">
-              <span class="stat-number counter" data-target="9.26">0.00</span>
-              <span class="stat-label">Current CGPA</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section skills-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="professional-badge-section">Skills & Expertise</div>
-        <h2 class="section-title">Skill Arsenal</h2>
-        <p class="section-subtitle">
-          Modern full-stack technologies, programming expertise and professional strengths
-        </p>
-      </div>
-    </div>
-
-    <div class="skills-divider">
-      <span>Technical Skills</span>
-    </div>
-
-    <div class="skills-marquee-container">
-      <div class="skills-marquee-row">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/html5.svg" alt="HTML5" loading="lazy" />
-          </div>
-          <span class="skill-name-display">HTML5</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/css3.svg" alt="CSS3" loading="lazy" />
-          </div>
-          <span class="skill-name-display">CSS3</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/javascript.svg" alt="JavaScript" loading="lazy" />
-          </div>
-          <span class="skill-name-display">JavaScript</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/typescript.svg" alt="TypeScript" loading="lazy" />
-          </div>
-          <span class="skill-name-display">TypeScript</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/react.svg" alt="React" loading="lazy" />
-          </div>
-          <span class="skill-name-display">React</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/nextjs.svg" alt="Next.js" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Next.js</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/redux.svg" alt="Redux" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Redux</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/tailwindcss.svg" alt="Tailwind CSS" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Tailwind CSS</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/shadcn.png" alt="ShadCN UI" loading="lazy" />
-          </div>
-          <span class="skill-name-display">ShadCN UI</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/html5.svg" alt="HTML5" loading="lazy" />
-          </div>
-          <span class="skill-name-display">HTML5</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/css3.svg" alt="CSS3" loading="lazy" />
-          </div>
-          <span class="skill-name-display">CSS3</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/javascript.svg" alt="JavaScript" loading="lazy" />
-          </div>
-          <span class="skill-name-display">JavaScript</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/typescript.svg" alt="TypeScript" loading="lazy" />
-          </div>
-          <span class="skill-name-display">TypeScript</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/react.svg" alt="React" loading="lazy" />
-          </div>
-          <span class="skill-name-display">React</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/nextjs.svg" alt="Next.js" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Next.js</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/redux.svg" alt="Redux" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Redux</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/tailwindcss.svg" alt="Tailwind CSS" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Tailwind CSS</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/shadcn.png" alt="ShadCN UI" loading="lazy" />
-          </div>
-          <span class="skill-name-display">ShadCN UI</span>
-        </div>
-      </div>
-
-      <div class="skills-marquee-row reverse">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/nodejs.svg" alt="Nodejs" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Node.js</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/php.svg" alt="PHP" loading="lazy" />
-          </div>
-          <span class="skill-name-display">PHP</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/express.svg" alt="Express" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Express</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/mongodb.svg" alt="MongoDB" loading="lazy" />
-          </div>
-          <span class="skill-name-display">MongoDB</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/mysql.svg" alt="MYSQL" loading="lazy" />
-          </div>
-          <span class="skill-name-display">MySQL</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/sass.svg" alt="Sass" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Sass</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/bootstrap.svg" alt="Bootstrap" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Bootstrap</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/ejs.svg" alt="EJS" loading="lazy" />
-          </div>
-          <span class="skill-name-display">EJS</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/nodejs.svg" alt="Nodejs" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Node.js</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/php.svg" alt="PHP" loading="lazy" />
-          </div>
-          <span class="skill-name-display">PHP</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/express.svg" alt="Express" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Express</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/mongodb.svg" alt="MongoDB" loading="lazy" />
-          </div>
-          <span class="skill-name-display">MongoDB</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/mysql.svg" alt="MYSQL" loading="lazy" />
-          </div>
-          <span class="skill-name-display">MySQL</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/sass.svg" alt="Sass" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Sass</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/bootstrap.svg" alt="Bootstrap" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Bootstrap</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/ejs.svg" alt="EJS" loading="lazy" />
-          </div>
-          <span class="skill-name-display">EJS</span>
-        </div>
-      </div>
-
-      <div class="skills-marquee-row">
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/c.svg" alt="C" loading="lazy" />
-          </div>
-          <span class="skill-name-display">C</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/java.svg" alt="Java" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Java</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/cplusplus.svg" alt="C++" loading="lazy" />
-          </div>
-          <span class="skill-name-display">C++</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/python.svg" alt="Python" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Python</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/git.svg" alt="Git" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Git</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/github.svg" alt="GitHub" loading="lazy" />
-          </div>
-          <span class="skill-name-display">GitHub</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/c.svg" alt="C" loading="lazy" />
-          </div>
-          <span class="skill-name-display">C</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/java.svg" alt="Java" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Java</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/cplusplus.svg" alt="C++" loading="lazy" />
-          </div>
-          <span class="skill-name-display">C++</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/python.svg" alt="Python" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Python</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/git.svg" alt="Git" loading="lazy" />
-          </div>
-          <span class="skill-name-display">Git</span>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon">
-            <img src="./images/skillIcons/github.svg" alt="GitHub" loading="lazy" />
+            <span class="skill-name-display">Communication</span>
           </div>
-          <span class="skill-name-display">GitHub</span>
-        </div>
-      </div>
-    </div>
 
-
-    <div class="skills-divider">
-      <span>Soft Skills</span>
-    </div>
-
-    <div class="soft-skills-wrapper">
-
-      <div class="skills-marquee-row reverse">
-
-        <div class="skill-card">
-          <i data-lucide="lightbulb"></i>
-          <span class="skill-name-display">Problem Solving</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="users"></i>
-          <span class="skill-name-display">Team Collaboration</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="message-circle"></i>
-          <span class="skill-name-display">Communication</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="clock"></i>
-          <span class="skill-name-display">Time Management</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="brain"></i>
-          <span class="skill-name-display">Critical Thinking</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="rocket"></i>
-          <span class="skill-name-display">Fast Learner</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="shuffle"></i>
-          <span class="skill-name-display">Adaptability</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="eye"></i>
-          <span class="skill-name-display">Attention to Detail</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="cpu"></i>
-          <span class="skill-name-display">Analytical Thinking</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="sparkles"></i>
-          <span class="skill-name-display">Creativity</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="lightbulb"></i>
-          <span class="skill-name-display">Problem Solving</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="users"></i>
-          <span class="skill-name-display">Team Collaboration</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="message-circle"></i>
-          <span class="skill-name-display">Communication</span>
-        </div>
-
-        <div class="skill-card">
-          <i data-lucide="clock"></i>
-          <span class="skill-name-display">Time Management</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="section education-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="professional-badge-section">Academic Background</div>
-        <h2 class="section-title">Education</h2>
-        <p class="section-subtitle">
-          A strong academic journey built on discipline, consistency, and
-          continuous learning.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <!-- Graduation -->
-        <div class="timeline-item">
-          <div class="timeline-icon education">
-            <i data-lucide="graduation-cap"></i>
-          </div>
-          <div class="timeline-content">
-            <div class="timeline-date">2022 – 2026</div>
-            <h3 class="timeline-title">Bachelor of Technology (B.Tech)</h3>
-            <h4 class="timeline-subtitle">
-              Computer Science & Engineering<br />
-              GNA University, Phagwara, Punjab, India
-            </h4>
-            <p class="timeline-description">
-              Currently pursuing B.Tech in Computer Science & Engineering with
-              focus on Full Stack Development, Data Structures & Algorithms,
-              Database Systems, and Software Engineering. Actively applying
-              academic knowledge to real-world projects.
-            </p>
-            <div class="timeline-achievements">
-              <span class="achievement-tag">CGPA: 9.26 / 10</span>
-              <span class="achievement-tag">Academic Excellence</span>
-              <span class="achievement-tag">Full Stack Specialization</span>
-              <span class="achievement-tag">Project-Based Learning</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 12th -->
-        <div class="timeline-item">
-          <div class="timeline-icon education">
-            <i data-lucide="book-open"></i>
-          </div>
-          <div class="timeline-content">
-            <div class="timeline-date">2020 – 2022</div>
-            <h3 class="timeline-title">Senior Secondary Education (12th)</h3>
-            <h4 class="timeline-subtitle">
-              Science Stream (PCM)<br />
-              Government Senior Secondary School, Karnana, Punjab
-            </h4>
-            <p class="timeline-description">
-              Completed higher secondary education with Physics, Chemistry,
-              and Mathematics, building a strong analytical and logical
-              foundation for engineering studies.
-            </p>
-            <div class="timeline-achievements">
-              <span class="achievement-tag">95.6% Overall</span>
-              <span class="achievement-tag">Science Stream (PCM)</span>
-              <span class="achievement-tag">Strong Analytical Foundation</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 10th -->
-        <div class="timeline-item">
-          <div class="timeline-icon education">
-            <i data-lucide="award"></i>
-          </div>
-          <div class="timeline-content">
-            <div class="timeline-date">2019 – 2020</div>
-            <h3 class="timeline-title">Matriculation (10th Grade)</h3>
-            <h4 class="timeline-subtitle">
-              Doaba Model Senior Secondary School, Sahlon, Punjab
-            </h4>
-            <p class="timeline-description">
-              Successfully completed matriculation with an A+ grade,
-              demonstrating academic consistency and strong foundational
-              knowledge across subjects.
-            </p>
-            <div class="timeline-achievements">
-              <span class="achievement-tag">A+ Grade</span>
-              <span class="achievement-tag">Strong Academic Foundation</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section experience-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="professional-badge-section">Professional Journey</div>
-        <h2 class="section-title">Work Experience</h2>
-        <p class="section-subtitle">
-          Practical industry experience building scalable full-stack
-          applications
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <!-- Internship 1 -->
-        <div class="timeline-item">
-          <div class="timeline-icon internship">
-            <i data-lucide="briefcase"></i>
-          </div>
-
-          <div class="timeline-content">
-            <div class="timeline-date">June 2024 – July 2024</div>
-            <h3 class="timeline-title">Full Stack Development Intern</h3>
-            <h4 class="timeline-subtitle">
-              Excellence Technology, Mohali, Punjab
-            </h4>
-
-            <p class="timeline-description">
-              Worked on developing responsive front-end features using HTML,
-              CSS, JavaScript, and React. Integrated RESTful APIs with Node.js
-              and Express.js while ensuring cross-browser compatibility and
-              scalable architecture. Collaborated using Git/GitHub and
-              participated in testing and debugging processes to enhance
-              application performance.
-            </p>
-
-            <div class="timeline-achievements">
-              <span class="achievement-tag">React.js</span>
-              <span class="achievement-tag">Node.js</span>
-              <span class="achievement-tag">Express.js</span>
-              <span class="achievement-tag">REST APIs</span>
-              <span class="achievement-tag">Git/GitHub</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Internship 2 -->
-        <div class="timeline-item">
-          <div class="timeline-icon internship">
-            <i data-lucide="code"></i>
-          </div>
-
-          <div class="timeline-content">
-            <div class="timeline-date">July 2025 – August 2025</div>
-            <h3 class="timeline-title">Software Development Intern</h3>
-            <h4 class="timeline-subtitle">Boxl Technologies, Gurgaon</h4>
-
-            <p class="timeline-description">
-              Worked on full-stack application development using Node.js,
-              Express.js, MongoDB, and EJS. Implemented secure authentication
-              systems, integrated third-party APIs, developed payment gateway
-              modules, and built automated PDF generation features for
-              invoices and reports. Contributed to backend logic, database
-              design, and scalable server-side rendering workflows.
-            </p>
-
-            <div class="timeline-achievements">
-              <span class="achievement-tag">EJS</span>
-              <span class="achievement-tag">API Integration</span>
-              <span class="achievement-tag">Payment Gateway</span>
-              <span class="achievement-tag">PDF Generation</span>
-              <span class="achievement-tag">Database Design</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS SECTION  -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-
-      <!-- Section Header -->
-      <div class="section-header">
-        <div class="professional-badge-section">Featured Work</div>
-        <h2 class="section-title">Projects Showcase</h2>
-        <p class="section-subtitle">
-          A collection of personal and academic projects demonstrating
-          full-stack development, UI/UX precision, and scalable backend systems.
-        </p>
-      </div>
-
-      <!-- Filter System -->
-      <div class="projects-filter-system">
-        <div class="filter-container">
-          <button class="filter-btn active" data-filter="all">
-            <i data-lucide="grid-3x3"></i>
-            <span>All</span>
-          </button>
-          <button class="filter-btn" data-filter="fullstack">
-            <i data-lucide="layers"></i>
-            <span>Full Stack</span>
-          </button>
-          <button class="filter-btn" data-filter="frontend">
-            <i data-lucide="monitor"></i>
-            <span>Frontend</span>
-          </button>
-          <button class="filter-btn" data-filter="backend">
-            <i data-lucide="server"></i>
-            <span>Backend</span>
-          </button>
-          <button class="filter-btn" data-filter="minor">
-            <i data-lucide="sparkles"></i>
-            <span>Minor</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="project-gallery">
-        <div class="projects-grid">
-
-          <!-- Wandervise -->
-          <div class="project-card" data-category="fullstack">
-            <div class="project-image-container">
-              <img src="./images/projects/Wandervise.webp" alt="Wandervise Travel Platform" />
-              <div class="project-category-badge">Full Stack Application</div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-header">
-                <h3 class="project-title">Wandervise</h3>
-                <p class="project-subtitle">
-                  Travel agency platform with booking system and admin dashboard
-                </p>
-              </div>
-
-              <p class="project-description">
-                A full-stack travel agency platform built with Node.js, Express, MongoDB, and EJS.
-                The system includes an admin dashboard for managing travel packages, products,
-                bookings, blogs, coupons, and users. Clients can explore destinations, book packages,
-                purchase products, submit reviews, and apply for careers. The platform integrates
-                Stripe payments and provides a responsive travel marketplace experience.
-              </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-badge">Node.js</span>
-                <span class="tech-badge">Express</span>
-                <span class="tech-badge">MongoDB</span>
-                <span class="tech-badge">EJS</span>
-                <span class="tech-badge">Stripe</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://wandervise-c0dl.onrender.com/" target="_blank" class="action-btn btn-primary">
-                  <i data-lucide="play-circle"></i>
-                  <span>View Demo</span>
-                </a>
-
-                <a href="https://github.com/Karan1674/Travelling-Website" target="_blank"
-                  class="action-btn btn-secondary">
-                  <i data-lucide="github"></i>
-                  <span>View Source Code</span>
-                </a>
-              </div>
-            </div>
+          <div class="skill-card">
+            <i data-lucide="clock"></i>
+            <span class="skill-name-display">Time Management</span>
           </div>
 
-          <!-- FlexiMint -->
-          <div class="project-card" data-category="fullstack">
-            <div class="project-image-container">
-              <img src="./images/projects/Fleximint.webp" alt="FlexiMint EMI Marketplace" />
-              <div class="project-category-badge">Full Stack Application</div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-header">
-                <h3 class="project-title">FlexiMint – EMI Smartphone Marketplace</h3>
-                <p class="project-subtitle">
-                  Dynamic EMI financing platform for smartphones
-                </p>
-              </div>
-
-              <p class="project-description">
-                FlexiMint is a full-stack smartphone marketplace that dynamically calculates EMI plans
-                using compound interest formulas. The platform allows users to filter products,
-                explore financing options, and view variant-specific EMI plans powered by a Node.js
-                REST API and MongoDB database.
-              </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-badge">React</span>
-                <span class="tech-badge">Node.js</span>
-                <span class="tech-badge">Express</span>
-                <span class="tech-badge">MongoDB</span>
-                <span class="tech-badge">Mongoose</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://fleximint-emi-marketplace.vercel.app/" target="_blank" class="action-btn btn-primary">
-                  <i data-lucide="play-circle"></i>
-                  <span>View Demo</span>
-                </a>
-
-                <a href="https://github.com/Karan1674/fleximint-emi-marketplace" target="_blank"
-                  class="action-btn btn-secondary">
-                  <i data-lucide="github"></i>
-                  <span>View Source Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Guri Drive -->
-          <div class="project-card" data-category="frontend">
-            <div class="project-image-container">
-              <img src="./images/projects/Guri-Drive.webp" alt="Guri Drive Driver Service Website" />
-              <div class="project-category-badge">Frontend Website</div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-header">
-                <h3 class="project-title">Guri Drive – Driver Service Website</h3>
-                <p class="project-subtitle">
-                  Professional driver service booking platform
-                </p>
-              </div>
-
-              <p class="project-description">
-                Guri Drive is a modern responsive website for a professional driver service.
-                It features an interactive booking form powered by EmailJS, animated UI
-                sections using Framer Motion, and a clean responsive layout built with
-                React and Tailwind CSS.
-              </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-badge">React</span>
-                <span class="tech-badge">Vite</span>
-                <span class="tech-badge">TailwindCSS</span>
-                <span class="tech-badge">Framer Motion</span>
-                <span class="tech-badge">EmailJS</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://guri-drive.vercel.app/" target="_blank" class="action-btn btn-primary">
-                  <i data-lucide="play-circle"></i>
-                  <span>Live Demo</span>
-                </a>
-
-                <a href="https://github.com/Karan1674/Guri-Drive" target="_blank" class="action-btn btn-secondary">
-                  <i data-lucide="github"></i>
-                  <span>View Source Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Advanced Todo List -->
-          <div class="project-card" data-category="fullstack">
-            <div class="project-image-container">
-              <img src="./images/projects/Advance-TodoList.webp" alt="Advanced Todo List Application" />
-              <div class="project-category-badge">Full Stack Application</div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-header">
-                <h3 class="project-title">Advanced Todo List</h3>
-                <p class="project-subtitle">
-                  SaaS-style task management platform with authentication and payments
-                </p>
-              </div>
-
-              <p class="project-description">
-                A feature-rich task management application built with Node.js, Express, MongoDB, and EJS.
-                The system allows users to manage tasks, attach files, collaborate through comments,
-                generate PDF reports, and upgrade accounts using multiple payment gateways. The project
-                demonstrates authentication systems, media storage, admin task assignments, and
-                subscription-based SaaS workflows.
-              </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-badge">Node.js</span>
-                <span class="tech-badge">Express</span>
-                <span class="tech-badge">MongoDB</span>
-                <span class="tech-badge">EJS</span>
-                <span class="tech-badge">Stripe</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://advance-todolist.onrender.com/" target="_blank" class="action-btn btn-primary">
-                  <i data-lucide="play-circle"></i>
-                  <span>View Demo</span>
-                </a>
-
-                <a href="https://github.com/Karan1674/Advance-Todolist" target="_blank"
-                  class="action-btn btn-secondary">
-                  <i data-lucide="github"></i>
-                  <span>View Source Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Stopwatch -->
-          <div class="project-card" data-category="minor">
-            <div class="project-image-container">
-              <img src=".\images\projects\Stop-Watch.webp" alt="JavaScript Stopwatch" />
-              <div class="project-category-badge">Minor Project</div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-header">
-                <h3 class="project-title">Stopwatch</h3>
-                <p class="project-subtitle">
-                  Precision stopwatch with interactive time tracking
-                </p>
-              </div>
-
-              <p class="project-description">
-                A responsive stopwatch application built using HTML, CSS, and JavaScript that tracks
-                hours, minutes, seconds, and milliseconds in real time. The project includes start,
-                stop, and reset functionality along with a toggle view that switches between a
-                digital timer and circular time indicators.
-              </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-badge">HTML</span>
-                <span class="tech-badge">CSS</span>
-                <span class="tech-badge">JavaScript</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://karan1674.github.io/Stop-Watch/" target="_blank" class="action-btn btn-primary">
-                  <i data-lucide="play-circle"></i>
-                  <span>View Demo</span>
-                </a>
-
-                <a href="https://github.com/Karan1674/Stop-Watch" target="_blank" class="action-btn btn-secondary">
-                  <i data-lucide="github"></i>
-                  <span>View Source Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Standard Calculator -->
-          <div class="project-card" data-category="minor">
-            <div class="project-image-container">
-              <img src=".\images\projects\Standard-Calculator.webp" alt="JavaScript Calculator" />
-              <div class="project-category-badge">Minor Project</div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-header">
-                <h3 class="project-title">Standard Calculator</h3>
-                <p class="project-subtitle">
-                  Interactive calculator with light & dark mode
-                </p>
-              </div>
-
-              <p class="project-description">
-                A responsive standard calculator built using HTML, CSS, and JavaScript that performs
-                basic arithmetic operations. The application includes features like expression
-                evaluation, input correction, clear functionality, sign change, and a toggleable
-                light and dark theme for an improved user experience.
-              </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-badge">HTML</span>
-                <span class="tech-badge">CSS</span>
-                <span class="tech-badge">JavaScript</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://karan1674.github.io/Standard-Calculator/" target="_blank"
-                  class="action-btn btn-primary">
-                  <i data-lucide="play-circle"></i>
-                  <span>View Demo</span>
-                </a>
-
-                <a href="https://github.com/Karan1674/Standard-Calculator" target="_blank"
-                  class="action-btn btn-secondary">
-                  <i data-lucide="github"></i>
-                  <span>View Source Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Analog Clock -->
-          <div class="project-card" data-category="minor">
-            <div class="project-image-container">
-              <img src=".\images\projects\Analog _Clock.webp" alt="Analog Clock Project" />
-              <div class="project-category-badge">Minor Project</div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-header">
-                <h3 class="project-title">Analog Clock</h3>
-                <p class="project-subtitle">
-                  Real-time clock using JavaScript Date API
-                </p>
-              </div>
-
-              <p class="project-description">
-                A responsive analog clock built using HTML, CSS, and JavaScript that dynamically
-                updates hour, minute, and second hands in real time using the JavaScript Date
-                object and CSS transformations.
-              </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-badge">HTML</span>
-                <span class="tech-badge">CSS</span>
-                <span class="tech-badge">JavaScript</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://karan1674.github.io/Analog-Clock/" target="_blank" class="action-btn btn-primary">
-                  <i data-lucide="play-circle"></i>
-                  <span>View Demo</span>
-                </a>
-
-                <a href="https://github.com/Karan1674/Analog-Clock" target="_blank" class="action-btn btn-secondary">
-                  <i data-lucide="github"></i>
-                  <span>View Source Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="projects-load-more">
-          <button id="loadMoreBtn" class="load-more-btn cta-btn-primary">
-            <span>Load More Projects</span>
-            <i data-lucide="arrow-right"></i>
-          </button>
-        </div>
-      </div>
-  </section>
-
-  <!-- Freelance Section -->
-  <section id="freelance" class="section freelance-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="professional-badge-section">Real Client Work</div>
-        <h2 class="section-title">Freelance Excellence</h2>
-        <p class="section-subtitle">
-          Delivering modern, performance-driven websites for international
-          clients with focus on usability, scalability, and business growth.
-        </p>
-      </div>
-
-      <!-- Hero Section -->
-      <div class="achievement-grid">
-        <!-- Live Client Websites – show 2+ -->
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i data-lucide="monitor"></i>
-          </div>
-          <div class="achievement-content">
-            <div class="counter" data-target="2" data-suffix="+">0</div>
-            <div class="achievement-label">Live Client Websites</div>
-          </div>
-        </div>
-
-        <!-- Countries Served – show 2+ -->
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i data-lucide="globe"></i>
-          </div>
-          <div class="achievement-content">
-            <div class="counter" data-target="2" data-suffix="+">0</div>
-            <div class="achievement-label">Countries Served</div>
-          </div>
-        </div>
-
-        <!-- Client Satisfaction – show 100% -->
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i data-lucide="check-circle"></i>
-          </div>
-          <div class="achievement-content">
-            <div class="counter" data-target="100" data-suffix="%">0</div>
-            <div class="achievement-label">Client Satisfaction</div>
+          <div class="skill-card">
+            <i data-lucide="brain"></i>
+            <span class="skill-name-display">Critical Thinking</span>
           </div>
-        </div>
 
-        <!-- On-Time Delivery – show 100% -->
-        <div class="achievement-card">
-          <div class="achievement-icon">
+          <div class="skill-card">
             <i data-lucide="rocket"></i>
-          </div>
-          <div class="achievement-content">
-            <div class="counter" data-target="100" data-suffix="%">0</div>
-            <div class="achievement-label">On-Time Delivery</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="freelance-gallery">
-        <div class="projects-grid">
-          <div class="project-card" data-category="portfolio">
-            <div class="project-image-container">
-              <img src="./images/projects/lensfillers.webp" alt="LensFillers Photography Website" />
-              <div class="project-category-badge">Photography Portfolio</div>
-            </div>
-
-            <div class="project-details">
-              <div class="project-header">
-                <h3 class="project-title">LensFillers</h3>
-                <p class="project-subtitle">
-                  Canada-Based Photography Studio
-                </p>
-              </div>
-
-              <p class="project-description">
-                Built a full-stack photography portfolio platform for a
-                Canada-based studio, featuring dynamic image galleries, secure
-                contact forms, and scalable backend architecture to support
-                growing client interactions.
-              </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-badge">React</span>
-                <span class="tech-badge">Node.js</span>
-                <span class="tech-badge">Express</span>
-                <span class="tech-badge">MongoDB</span>
-              </div>
-
-              <div class="project-actions">
-                <a href="https://lensfillers.ca" target="_blank" class="action-btn btn-primary">
-                  <i data-lucide="external-link"></i>
-                  <span>Visit Live Website</span>
-                </a>
-                <a href="#contact" class="action-btn btn-secondary">
-                  <i data-lucide="message-circle"></i>
-                  <span>Start Similar Project</span>
-                </a>
-              </div>
-            </div>
+            <span class="skill-name-display">Fast Learner</span>
           </div>
 
-          <div class="project-card" data-category="business">
-            <div class="project-image-container">
-              <img src="./images/projects/indy-truck.webp" alt="INDY Truck & Trailer Repair Website" />
-              <div class="project-category-badge">
-                Business Service Website
-              </div>
-            </div>
+          <div class="skill-card">
+            <i data-lucide="shuffle"></i>
+            <span class="skill-name-display">Adaptability</span>
+          </div>
 
-            <div class="project-details">
-              <div class="project-header">
-                <h3 class="project-title">INDY Truck & Trailer Repair</h3>
-                <p class="project-subtitle">
-                  USA-Based Repair Service Platform
-                </p>
-              </div>
+          <div class="skill-card">
+            <i data-lucide="eye"></i>
+            <span class="skill-name-display">Attention to Detail</span>
+          </div>
 
-              <p class="project-description">
-                Designed and developed a modern, trust-focused service website
-                for a USA-based truck and trailer repair company. The platform
-                highlights services clearly, integrates instant contact forms,
-                and ensures fast performance for fleet owners and truckers on
-                the go.
-              </p>
+          <div class="skill-card">
+            <i data-lucide="cpu"></i>
+            <span class="skill-name-display">Analytical Thinking</span>
+          </div>
 
-              <div class="project-tech-stack">
-                <span class="tech-badge">React</span>
-                <span class="tech-badge">TailwindCSS</span>
-                <span class="tech-badge">Node.js</span>
-                <span class="tech-badge">EmailJS</span>
-              </div>
+          <div class="skill-card">
+            <i data-lucide="sparkles"></i>
+            <span class="skill-name-display">Creativity</span>
+          </div>
 
-              <div class="project-actions">
-                <a href="https://indytruckrepair.us" target="_blank" class="action-btn btn-primary">
-                  <i data-lucide="external-link"></i>
-                  <span>Visit Live Website</span>
-                </a>
-                <a href="#contact" class="action-btn btn-secondary">
-                  <i data-lucide="message-circle"></i>
-                  <span>Start Similar Project</span>
-                </a>
-              </div>
-            </div>
+          <div class="skill-card">
+            <i data-lucide="lightbulb"></i>
+            <span class="skill-name-display">Problem Solving</span>
+          </div>
+
+          <div class="skill-card">
+            <i data-lucide="users"></i>
+            <span class="skill-name-display">Team Collaboration</span>
+          </div>
+
+          <div class="skill-card">
+            <i data-lucide="message-circle"></i>
+            <span class="skill-name-display">Communication</span>
+          </div>
+
+          <div class="skill-card">
+            <i data-lucide="clock"></i>
+            <span class="skill-name-display">Time Management</span>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- CTA Section -->
-      <div class="freelance-cta-section">
-        <div class="cta-background">
-          <div class="animated-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-          </div>
-        </div>
-
-        <div class="cta-content">
-          <h3 class="cta-title">Ready to Build Your Business Website?</h3>
-          <p class="cta-description">
-            I help businesses establish a strong digital presence with modern,
-            responsive, and performance-focused web solutions.
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="professional-badge-section">Academic Background</div>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">
+            A strong academic journey built on discipline, consistency, and
+            continuous learning.
           </p>
+        </div>
 
-          <div class="cta-actions">
-            <a href="#contact" class="cta-btn-primary">
-              <span>Start Your Project</span>
+        <div class="timeline-container">
+          <!-- Graduation -->
+          <div class="timeline-item">
+            <div class="timeline-icon education">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">2022 – 2026</div>
+              <h3 class="timeline-title">Bachelor of Technology (B.Tech)</h3>
+              <h4 class="timeline-subtitle">
+                Computer Science & Engineering<br />
+                GNA University, Phagwara, Punjab, India
+              </h4>
+              <p class="timeline-description">
+                Currently pursuing B.Tech in Computer Science & Engineering with
+                focus on Full Stack Development, Data Structures & Algorithms,
+                Database Systems, and Software Engineering. Actively applying
+                academic knowledge to real-world projects.
+              </p>
+              <div class="timeline-achievements">
+                <span class="achievement-tag">CGPA: 9.26 / 10</span>
+                <span class="achievement-tag">Academic Excellence</span>
+                <span class="achievement-tag">Full Stack Specialization</span>
+                <span class="achievement-tag">Project-Based Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12th -->
+          <div class="timeline-item">
+            <div class="timeline-icon education">
+              <i data-lucide="book-open"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">2020 – 2022</div>
+              <h3 class="timeline-title">Senior Secondary Education (12th)</h3>
+              <h4 class="timeline-subtitle">
+                Science Stream (PCM)<br />
+                Government Senior Secondary School, Karnana, Punjab
+              </h4>
+              <p class="timeline-description">
+                Completed higher secondary education with Physics, Chemistry,
+                and Mathematics, building a strong analytical and logical
+                foundation for engineering studies.
+              </p>
+              <div class="timeline-achievements">
+                <span class="achievement-tag">95.6% Overall</span>
+                <span class="achievement-tag">Science Stream (PCM)</span>
+                <span class="achievement-tag"
+                  >Strong Analytical Foundation</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 10th -->
+          <div class="timeline-item">
+            <div class="timeline-icon education">
+              <i data-lucide="award"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-date">2019 – 2020</div>
+              <h3 class="timeline-title">Matriculation (10th Grade)</h3>
+              <h4 class="timeline-subtitle">
+                Doaba Model Senior Secondary School, Sahlon, Punjab
+              </h4>
+              <p class="timeline-description">
+                Successfully completed matriculation with an A+ grade,
+                demonstrating academic consistency and strong foundational
+                knowledge across subjects.
+              </p>
+              <div class="timeline-achievements">
+                <span class="achievement-tag">A+ Grade</span>
+                <span class="achievement-tag">Strong Academic Foundation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="professional-badge-section">Professional Journey</div>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">
+            Practical industry experience building scalable full-stack
+            applications
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Internship 1 -->
+          <div class="timeline-item">
+            <div class="timeline-icon internship">
+              <i data-lucide="briefcase"></i>
+            </div>
+
+            <div class="timeline-content">
+              <div class="timeline-date">June 2024 – July 2024</div>
+              <h3 class="timeline-title">Full Stack Development Intern</h3>
+              <h4 class="timeline-subtitle">
+                Excellence Technology, Mohali, Punjab
+              </h4>
+
+              <p class="timeline-description">
+                Worked on developing responsive front-end features using HTML,
+                CSS, JavaScript, and React. Integrated RESTful APIs with Node.js
+                and Express.js while ensuring cross-browser compatibility and
+                scalable architecture. Collaborated using Git/GitHub and
+                participated in testing and debugging processes to enhance
+                application performance.
+              </p>
+
+              <div class="timeline-achievements">
+                <span class="achievement-tag">React.js</span>
+                <span class="achievement-tag">Node.js</span>
+                <span class="achievement-tag">Express.js</span>
+                <span class="achievement-tag">REST APIs</span>
+                <span class="achievement-tag">Git/GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Internship 2 -->
+          <div class="timeline-item">
+            <div class="timeline-icon internship">
+              <i data-lucide="code"></i>
+            </div>
+
+            <div class="timeline-content">
+              <div class="timeline-date">July 2025 – August 2025</div>
+              <h3 class="timeline-title">Software Development Intern</h3>
+              <h4 class="timeline-subtitle">Boxl Technologies, Gurgaon</h4>
+
+              <p class="timeline-description">
+                Worked on full-stack application development using Node.js,
+                Express.js, MongoDB, and EJS. Implemented secure authentication
+                systems, integrated third-party APIs, developed payment gateway
+                modules, and built automated PDF generation features for
+                invoices and reports. Contributed to backend logic, database
+                design, and scalable server-side rendering workflows.
+              </p>
+
+              <div class="timeline-achievements">
+                <span class="achievement-tag">EJS</span>
+                <span class="achievement-tag">API Integration</span>
+                <span class="achievement-tag">Payment Gateway</span>
+                <span class="achievement-tag">PDF Generation</span>
+                <span class="achievement-tag">Database Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION  -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="professional-badge-section">Featured Work</div>
+          <h2 class="section-title">Projects Showcase</h2>
+          <p class="section-subtitle">
+            A collection of personal and academic projects demonstrating
+            full-stack development, UI/UX precision, and scalable backend
+            systems.
+          </p>
+        </div>
+
+        <!-- Filter System -->
+        <div class="projects-filter-system">
+          <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">
+              <i data-lucide="grid-3x3"></i>
+              <span>All</span>
+            </button>
+            <button class="filter-btn" data-filter="fullstack">
+              <i data-lucide="layers"></i>
+              <span>Full Stack</span>
+            </button>
+            <button class="filter-btn" data-filter="frontend">
+              <i data-lucide="monitor"></i>
+              <span>Frontend</span>
+            </button>
+            <button class="filter-btn" data-filter="backend">
+              <i data-lucide="server"></i>
+              <span>Backend</span>
+            </button>
+            <button class="filter-btn" data-filter="minor">
+              <i data-lucide="sparkles"></i>
+              <span>Minor</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="project-gallery">
+          <div class="projects-grid">
+            <!-- Wandervise -->
+            <div class="project-card" data-category="fullstack">
+              <div class="project-image-container">
+                <img
+                  src="./images/projects/Wandervise.webp"
+                  alt="Wandervise Travel Platform"
+                />
+                <div class="project-category-badge">Full Stack Application</div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">Wandervise</h3>
+                  <p class="project-subtitle">
+                    Travel agency platform with booking system and admin
+                    dashboard
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  A full-stack travel agency platform built with Node.js,
+                  Express, MongoDB, and EJS. The system includes an admin
+                  dashboard for managing travel packages, products, bookings,
+                  blogs, coupons, and users. Clients can explore destinations,
+                  book packages, purchase products, submit reviews, and apply
+                  for careers. The platform integrates Stripe payments and
+                  provides a responsive travel marketplace experience.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">Express</span>
+                  <span class="tech-badge">MongoDB</span>
+                  <span class="tech-badge">EJS</span>
+                  <span class="tech-badge">Stripe</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://wandervise-c0dl.onrender.com/"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="play-circle"></i>
+                    <span>View Demo</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Karan1674/Travelling-Website"
+                    target="_blank"
+                    class="action-btn btn-secondary"
+                  >
+                    <i data-lucide="github"></i>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- FlexiMint -->
+            <div class="project-card" data-category="fullstack">
+              <div class="project-image-container">
+                <img
+                  src="./images/projects/Fleximint.webp"
+                  alt="FlexiMint EMI Marketplace"
+                />
+                <div class="project-category-badge">Full Stack Application</div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    FlexiMint – EMI Smartphone Marketplace
+                  </h3>
+                  <p class="project-subtitle">
+                    Dynamic EMI financing platform for smartphones
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  FlexiMint is a full-stack smartphone marketplace that
+                  dynamically calculates EMI plans using compound interest
+                  formulas. The platform allows users to filter products,
+                  explore financing options, and view variant-specific EMI plans
+                  powered by a Node.js REST API and MongoDB database.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">Express</span>
+                  <span class="tech-badge">MongoDB</span>
+                  <span class="tech-badge">Mongoose</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://fleximint-emi-marketplace.vercel.app/"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="play-circle"></i>
+                    <span>View Demo</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Karan1674/fleximint-emi-marketplace"
+                    target="_blank"
+                    class="action-btn btn-secondary"
+                  >
+                    <i data-lucide="github"></i>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guri Drive -->
+            <div class="project-card" data-category="frontend">
+              <div class="project-image-container">
+                <img
+                  src="./images/projects/Guri-Drive.webp"
+                  alt="Guri Drive Driver Service Website"
+                />
+                <div class="project-category-badge">Frontend Website</div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">
+                    Guri Drive – Driver Service Website
+                  </h3>
+                  <p class="project-subtitle">
+                    Professional driver service booking platform
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  Guri Drive is a modern responsive website for a professional
+                  driver service. It features an interactive booking form
+                  powered by EmailJS, animated UI sections using Framer Motion,
+                  and a clean responsive layout built with React and Tailwind
+                  CSS.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">Vite</span>
+                  <span class="tech-badge">TailwindCSS</span>
+                  <span class="tech-badge">Framer Motion</span>
+                  <span class="tech-badge">EmailJS</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://guri-drive.vercel.app/"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="play-circle"></i>
+                    <span>Live Demo</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Karan1674/Guri-Drive"
+                    target="_blank"
+                    class="action-btn btn-secondary"
+                  >
+                    <i data-lucide="github"></i>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Advanced Todo List -->
+            <div class="project-card" data-category="fullstack">
+              <div class="project-image-container">
+                <img
+                  src="./images/projects/Advance-TodoList.webp"
+                  alt="Advanced Todo List Application"
+                />
+                <div class="project-category-badge">Full Stack Application</div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">Advanced Todo List</h3>
+                  <p class="project-subtitle">
+                    SaaS-style task management platform with authentication and
+                    payments
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  A feature-rich task management application built with Node.js,
+                  Express, MongoDB, and EJS. The system allows users to manage
+                  tasks, attach files, collaborate through comments, generate
+                  PDF reports, and upgrade accounts using multiple payment
+                  gateways. The project demonstrates authentication systems,
+                  media storage, admin task assignments, and subscription-based
+                  SaaS workflows.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">Express</span>
+                  <span class="tech-badge">MongoDB</span>
+                  <span class="tech-badge">EJS</span>
+                  <span class="tech-badge">Stripe</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://advance-todolist.onrender.com/"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="play-circle"></i>
+                    <span>View Demo</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Karan1674/Advance-Todolist"
+                    target="_blank"
+                    class="action-btn btn-secondary"
+                  >
+                    <i data-lucide="github"></i>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weather Forecast Dashboard -->
+            <div class="project-card" data-category="frontend">
+              <div class="project-image-container">
+                <img
+                  src="./images/projects/Weather.webp"
+                  alt="Weather Forecast Dashboard"
+                />
+                <div class="project-category-badge">Frontend Application</div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">Weather Forecast Dashboard</h3>
+                  <p class="project-subtitle">
+                    Real-time weather tracking and forecast interface
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  A responsive weather dashboard that fetches real-time weather
+                  data using WeatherAPI. Users can search any city to view
+                  current conditions, hourly forecasts, and a 7-day weather
+                  prediction. The project demonstrates API integration,
+                  asynchronous JavaScript, and dynamic DOM updates in an
+                  interactive UI.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">HTML</span>
+                  <span class="tech-badge">CSS</span>
+                  <span class="tech-badge">JavaScript</span>
+                  <span class="tech-badge">WeatherAPI</span>
+                  <span class="tech-badge">FontAwesome</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://karan1674.github.io/Weather-forecast-dashboard/"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="play-circle"></i>
+                    <span>View Demo</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Karan1674/Weather-forecast-dashboard"
+                    target="_blank"
+                    class="action-btn btn-secondary"
+                  >
+                    <i data-lucide="github"></i>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stopwatch -->
+            <div class="project-card" data-category="minor">
+              <div class="project-image-container">
+                <img
+                  src=".\images\projects\Stop-Watch.webp"
+                  alt="JavaScript Stopwatch"
+                />
+                <div class="project-category-badge">Minor Project</div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">Stopwatch</h3>
+                  <p class="project-subtitle">
+                    Precision stopwatch with interactive time tracking
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  A responsive stopwatch application built using HTML, CSS, and
+                  JavaScript that tracks hours, minutes, seconds, and
+                  milliseconds in real time. The project includes start, stop,
+                  and reset functionality along with a toggle view that switches
+                  between a digital timer and circular time indicators.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">HTML</span>
+                  <span class="tech-badge">CSS</span>
+                  <span class="tech-badge">JavaScript</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://karan1674.github.io/Stop-Watch/"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="play-circle"></i>
+                    <span>View Demo</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Karan1674/Stop-Watch"
+                    target="_blank"
+                    class="action-btn btn-secondary"
+                  >
+                    <i data-lucide="github"></i>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Standard Calculator -->
+            <div class="project-card" data-category="minor">
+              <div class="project-image-container">
+                <img
+                  src=".\images\projects\Standard-Calculator.webp"
+                  alt="JavaScript Calculator"
+                />
+                <div class="project-category-badge">Minor Project</div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">Standard Calculator</h3>
+                  <p class="project-subtitle">
+                    Interactive calculator with light & dark mode
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  A responsive standard calculator built using HTML, CSS, and
+                  JavaScript that performs basic arithmetic operations. The
+                  application includes features like expression evaluation,
+                  input correction, clear functionality, sign change, and a
+                  toggleable light and dark theme for an improved user
+                  experience.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">HTML</span>
+                  <span class="tech-badge">CSS</span>
+                  <span class="tech-badge">JavaScript</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://karan1674.github.io/Standard-Calculator/"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="play-circle"></i>
+                    <span>View Demo</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Karan1674/Standard-Calculator"
+                    target="_blank"
+                    class="action-btn btn-secondary"
+                  >
+                    <i data-lucide="github"></i>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Analog Clock -->
+            <div class="project-card" data-category="minor">
+              <div class="project-image-container">
+                <img
+                  src=".\images\projects\Analog _Clock.webp"
+                  alt="Analog Clock Project"
+                />
+                <div class="project-category-badge">Minor Project</div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">Analog Clock</h3>
+                  <p class="project-subtitle">
+                    Real-time clock using JavaScript Date API
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  A responsive analog clock built using HTML, CSS, and
+                  JavaScript that dynamically updates hour, minute, and second
+                  hands in real time using the JavaScript Date object and CSS
+                  transformations.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">HTML</span>
+                  <span class="tech-badge">CSS</span>
+                  <span class="tech-badge">JavaScript</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://karan1674.github.io/Analog-Clock/"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="play-circle"></i>
+                    <span>View Demo</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Karan1674/Analog-Clock"
+                    target="_blank"
+                    class="action-btn btn-secondary"
+                  >
+                    <i data-lucide="github"></i>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tic Tac Toe -->
+            <div class="project-card" data-category="minor">
+              <div class="project-image-container">
+                <img
+                  src="./images/projects/tic-tac-toe.webp"
+                  alt="Tic Tac Toe Game"
+                />
+                <div class="project-category-badge">Minor Project</div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">Tic Tac Toe Game</h3>
+                  <p class="project-subtitle">
+                    Interactive two-player browser game
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  A browser-based Tic Tac Toe game built with JavaScript that
+                  allows two players to compete on a classic 3×3 grid. The game
+                  includes player name input, win detection logic, draw
+                  detection, and animated UI elements, demonstrating DOM
+                  manipulation and event handling.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">HTML</span>
+                  <span class="tech-badge">CSS</span>
+                  <span class="tech-badge">JavaScript</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://karan1674.github.io/Tic-Tac-Toe/"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="play-circle"></i>
+                    <span>View Demo</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Karan1674/Tic-Tac-Toe"
+                    target="_blank"
+                    class="action-btn btn-secondary"
+                  >
+                    <i data-lucide="github"></i>
+                    <span>View Source Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-load-more">
+            <button id="loadMoreBtn" class="load-more-btn cta-btn-primary">
+              <span>Load More Projects</span>
               <i data-lucide="arrow-right"></i>
-            </a>
-
-            <a href="#contact" class="cta-btn-secondary">
-              <i data-lucide="calendar"></i>
-              <span>Schedule a Call</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHAT PEOPLE SAY SECTION -->
-  <section id="testimonials" class="section testimonials-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="professional-badge-section">What People Say</div>
-        <h2 class="section-title">What People Say</h2>
-        <p class="section-subtitle">
-          Feedback from mentors, collaborators, and clients I’ve worked with
-        </p>
-      </div>
-
-      <div class="testimonials-slider">
-        <!-- FEATURED CARD -->
-        <div class="testimonial-card featured">
-          <div class="testimonial-quote">
-            <i data-lucide="quote"></i>
-            <p>
-              "Karanjit demonstrates exceptional problem-solving ability and a
-              deep understanding of full stack development. He approaches
-              challenges with clarity, writes clean and scalable code, and
-              consistently delivers solutions that are both technically strong
-              and user-focused. His dedication, communication skills, and
-              commitment to excellence make him a highly reliable developer to
-              work with."
-            </p>
-          </div>
-
-          <div class="testimonial-rating">
-            <div class="stars">
-              <i data-lucide="star" class="star filled"></i>
-              <i data-lucide="star" class="star filled"></i>
-              <i data-lucide="star" class="star filled"></i>
-              <i data-lucide="star" class="star filled"></i>
-              <i data-lucide="star" class="star filled"></i>
-            </div>
-          </div>
-
-          <div class="testimonial-author">
-            <div class="author-avatar icon-avatar">
-              <i data-lucide="user"></i>
-            </div>
-            <div class="author-info">
-              <h4>Senior Technical Internship Mentor</h4>
-              <p>Full Stack Development Guide</p>
-            </div>
-          </div>
+    <!-- Freelance Section -->
+    <section id="freelance" class="section freelance-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="professional-badge-section">Real Client Work</div>
+          <h2 class="section-title">Freelance Excellence</h2>
+          <p class="section-subtitle">
+            Delivering modern, performance-driven websites for international
+            clients with focus on usability, scalability, and business growth.
+          </p>
         </div>
 
-        <!-- OTHER CARDS -->
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-quote">
-              <i data-lucide="quote"></i>
-              <p>
-                “Among the top-performing students in the department, Karanjit
-                consistently shows strong analytical thinking and practical
-                implementation skills in software development.”
-              </p>
+        <!-- Hero Section -->
+        <div class="achievement-grid">
+          <!-- Live Client Websites – show 2+ -->
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i data-lucide="monitor"></i>
             </div>
-
-            <div class="testimonial-rating">
-              <div class="stars">
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-              </div>
-            </div>
-
-            <div class="testimonial-author compact">
-              <div class="author-avatar icon-avatar small">
-                <i data-lucide="user"></i>
-              </div>
-              <div class="author-info">
-                <h5>University Professor</h5>
-                <p>Computer Science Department</p>
-              </div>
+            <div class="achievement-content">
+              <div class="counter" data-target="2" data-suffix="+">0</div>
+              <div class="achievement-label">Live Client Websites</div>
             </div>
           </div>
 
-          <div class="testimonial-card">
-            <div class="testimonial-quote">
-              <i data-lucide="quote"></i>
-              <p>
-                “Helped build multiple academic and personal projects
-                including web applications for classmates and guidance support
-                for patent documentation work. A reliable and dedicated team
-                contributor.”
-              </p>
-            </div>
-
-            <div class="testimonial-rating">
-              <div class="stars">
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-              </div>
-            </div>
-
-            <div class="testimonial-author compact">
-              <div class="author-avatar icon-avatar small">
-                <i data-lucide="user"></i>
-              </div>
-              <div class="author-info">
-                <h5>Project Collaborator</h5>
-                <p>Academic Project Partner</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-quote">
-              <i data-lucide="quote"></i>
-              <p>
-                "Professional communication, timely delivery, and clean code.
-                The final result worked exactly as expected. Communication was
-                clear and the project was completed on time.”
-              </p>
-            </div>
-
-            <div class="testimonial-rating">
-              <div class="stars">
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-                <i data-lucide="star" class="star filled"></i>
-              </div>
-            </div>
-
-            <div class="testimonial-author compact">
-              <div class="author-avatar icon-avatar small">
-                <i data-lucide="user"></i>
-              </div>
-              <div class="author-info">
-                <h5>Freelance Client</h5>
-                <p>Web Application Project</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- STATS -->
-        <div class="testimonials-stats">
-          <!-- Happy Clients – animate to 2+ -->
-          <div class="testimonial-stat-item">
-            <div class="testimonial-stat-number counter" data-target="2" data-suffix="+">
-              0
-            </div>
-            <div class="testimonial-stat-label">Happy Clients</div>
-          </div>
-
-          <!-- Average Rating – animate to 4.9 -->
-          <div class="testimonial-stat-item">
-            <div class="testimonial-stat-number counter" data-target="4.9">
-              0.0
-            </div>
-            <div class="testimonial-stat-label">Average Rating</div>
-          </div>
-
-          <!-- Project Success – animate to 100% -->
-          <div class="testimonial-stat-item">
-            <div class="testimonial-stat-number counter" data-target="100" data-suffix="%">
-              0
-            </div>
-            <div class="testimonial-stat-label">Project Success</div>
-          </div>
-
-          <!-- Support – no animation, keep static -->
-          <div class="testimonial-stat-item">
-            <div class="testimonial-stat-number">24/7</div>
-            <div class="testimonial-stat-label">Support</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="professional-badge-section">Get In Touch</div>
-        <h2 class="section-title">Let’s Work Together</h2>
-        <p class="section-subtitle">
-          Have a project in mind? I’d love to hear about it and help bring
-          your ideas to life.
-        </p>
-      </div>
-
-      <div class="contact-container">
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i data-lucide="mail"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Email</h4>
-              <p>karanjitsingh.dev@gmail.com</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i data-lucide="phone"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Phone</h4>
-              <p>Available Upon Request</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i data-lucide="map-pin"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Location</h4>
-              <p>Punjab, India</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
+          <!-- Countries Served – show 2+ -->
+          <div class="achievement-card">
+            <div class="achievement-icon">
               <i data-lucide="globe"></i>
             </div>
-            <div class="contact-details">
-              <h4>Availability</h4>
-              <p>Open to Remote & Global Opportunities</p>
+            <div class="achievement-content">
+              <div class="counter" data-target="2" data-suffix="+">0</div>
+              <div class="achievement-label">Countries Served</div>
             </div>
           </div>
 
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i data-lucide="clock"></i>
+          <!-- Client Satisfaction – show 100% -->
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i data-lucide="check-circle"></i>
             </div>
-            <div class="contact-details">
-              <h4>Response Time</h4>
-              <p>Within 12 – 24 Hours</p>
+            <div class="achievement-content">
+              <div class="counter" data-target="100" data-suffix="%">0</div>
+              <div class="achievement-label">Client Satisfaction</div>
+            </div>
+          </div>
+
+          <!-- On-Time Delivery – show 100% -->
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i data-lucide="rocket"></i>
+            </div>
+            <div class="achievement-content">
+              <div class="counter" data-target="100" data-suffix="%">0</div>
+              <div class="achievement-label">On-Time Delivery</div>
             </div>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <form class="contact-form" id="contactForm">
+        <!-- Projects Grid -->
+        <div class="freelance-gallery">
+          <div class="projects-grid">
+            <div class="project-card" data-category="portfolio">
+              <div class="project-image-container">
+                <img
+                  src="./images/projects/lensfillers.webp"
+                  alt="LensFillers Photography Website"
+                />
+                <div class="project-category-badge">Photography Portfolio</div>
+              </div>
 
-          <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" name="name" class="form-input" placeholder="Your Full Name" required>
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">LensFillers</h3>
+                  <p class="project-subtitle">
+                    Canada-Based Photography Studio
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  Built a full-stack photography portfolio platform for a
+                  Canada-based studio, featuring dynamic image galleries, secure
+                  contact forms, and scalable backend architecture to support
+                  growing client interactions.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">Express</span>
+                  <span class="tech-badge">MongoDB</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://lensfillers.ca"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="external-link"></i>
+                    <span>Visit Live Website</span>
+                  </a>
+                  <a href="#contact" class="action-btn btn-secondary">
+                    <i data-lucide="message-circle"></i>
+                    <span>Start Similar Project</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-category="business">
+              <div class="project-image-container">
+                <img
+                  src="./images/projects/indy-truck.webp"
+                  alt="INDY Truck & Trailer Repair Website"
+                />
+                <div class="project-category-badge">
+                  Business Service Website
+                </div>
+              </div>
+
+              <div class="project-details">
+                <div class="project-header">
+                  <h3 class="project-title">INDY Truck & Trailer Repair</h3>
+                  <p class="project-subtitle">
+                    USA-Based Repair Service Platform
+                  </p>
+                </div>
+
+                <p class="project-description">
+                  Designed and developed a modern, trust-focused service website
+                  for a USA-based truck and trailer repair company. The platform
+                  highlights services clearly, integrates instant contact forms,
+                  and ensures fast performance for fleet owners and truckers on
+                  the go.
+                </p>
+
+                <div class="project-tech-stack">
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">TailwindCSS</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">EmailJS</span>
+                </div>
+
+                <div class="project-actions">
+                  <a
+                    href="https://indytruckrepair.us"
+                    target="_blank"
+                    class="action-btn btn-primary"
+                  >
+                    <i data-lucide="external-link"></i>
+                    <span>Visit Live Website</span>
+                  </a>
+                  <a href="#contact" class="action-btn btn-secondary">
+                    <i data-lucide="message-circle"></i>
+                    <span>Start Similar Project</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="freelance-cta-section">
+          <div class="cta-background">
+            <div class="animated-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+          <div class="cta-content">
+            <h3 class="cta-title">Ready to Build Your Business Website?</h3>
+            <p class="cta-description">
+              I help businesses establish a strong digital presence with modern,
+              responsive, and performance-focused web solutions.
+            </p>
+
+            <div class="cta-actions">
+              <a href="#contact" class="cta-btn-primary">
+                <span>Start Your Project</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+
+              <a href="#contact" class="cta-btn-secondary">
+                <i data-lucide="calendar"></i>
+                <span>Schedule a Call</span>
+              </a>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label class="form-label">Project Type</label>
-            <input type="text" name="project" class="form-input" placeholder="Web App, Portfolio, Dashboard, etc."
-              required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Project Details</label>
-            <textarea name="message" class="form-textarea" placeholder="Tell me about your project..."
-              required></textarea>
-          </div>
-
-          <!-- Hidden date field -->
-          <input type="hidden" name="date" id="date">
-
-          <!-- Honeypot spam protection -->
-          <input type="text" name="website" id="website" style="display:none">
-
-          <button type="submit" class="form-button">
-            <span>Send Message</span>
-          </button>
-
-        </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <section id="footer">
-    <!-- Footer Header with CTA -->
-    <div class="footer-header">
-      <div class="footer-cta">
-        <h3>Ready to Build Something Amazing?</h3>
-        <p>
-          Let's turn your vision into a digital reality. Get in touch for a
-          consultation.
-        </p>
-        <a href="#contact" class="footer-cta-button">
-          <span>Start Your Project</span>
-          <i data-lucide="arrow-right"></i>
-        </a>
-      </div>
-    </div>
-
-    <footer class="footer">
+    <!-- WHAT PEOPLE SAY SECTION -->
+    <section id="testimonials" class="section testimonials-section">
       <div class="container">
-        <!-- Footer Main Content -->
-        <div class="footer-content">
-          <!-- Brand -->
-          <div class="footer-section footer-brand">
-            <div class="brand-info">
-              <h4>Karanjit Singh</h4>
-              <p class="brand-tagline">Full-Stack Developer</p>
-              <p class="brand-description">
-                Passionate Full-Stack Developer specializing in MERN stack,
-                REST APIs, database design, and modern responsive UI
-                development.
-              </p>
-            </div>
-
-            <div class="footer-contact-info">
-              <div class="contact-item">
-                <i data-lucide="mail"></i>
-                <span>karanjitsingh.dev@gmail.com</span>
-              </div>
-              <div class="contact-item">
-                <i data-lucide="map-pin"></i>
-                <span>Punjab, India</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <div class="footer-links">
-              <a href="#home" class="footer-link"><i data-lucide="home"></i><span>Home</span></a>
-              <a href="#about" class="footer-link"><i data-lucide="user"></i><span>About</span></a>
-              <a href="#skills" class="footer-link"><i data-lucide="code"></i><span>Skills</span></a>
-              <a href="#projects" class="footer-link"><i data-lucide="folder"></i><span>Projects</span></a>
-
-              <a href="#freelance" class="footer-link">
-                <i data-lucide="briefcase"></i>
-                <span>Freelance</span>
-              </a>
-              <a href="#contact" class="footer-link"><i data-lucide="message-circle"></i><span>Contact</span></a>
-            </div>
-          </div>
-
-          <div class="footer-section">
-            <h4>Services</h4>
-            <div class="footer-links">
-              <a href="#" class="footer-link">
-                <i data-lucide="layout"></i>
-                <span>Custom Website Development</span>
-              </a>
-
-              <a href="#" class="footer-link">
-                <i data-lucide="server"></i>
-                <span>Full-Stack Web Applications</span>
-              </a>
-
-              <a href="#" class="footer-link">
-                <i data-lucide="database"></i>
-                <span>Database Design & Integration</span>
-              </a>
-
-              <a href="#" class="footer-link">
-                <i data-lucide="link"></i>
-                <span>API Development & Integration</span>
-              </a>
-
-              <a href="#" class="footer-link">
-                <i data-lucide="shopping-cart"></i>
-                <span>E-Commerce Solutions</span>
-              </a>
-
-              <a href="#" class="footer-link">
-                <i data-lucide="zap"></i>
-                <span>Performance Optimization</span>
-              </a>
-            </div>
-          </div>
+        <div class="section-header">
+          <div class="professional-badge-section">What People Say</div>
+          <h2 class="section-title">What People Say</h2>
+          <p class="section-subtitle">
+            Feedback from mentors, collaborators, and clients I’ve worked with
+          </p>
         </div>
 
-        <!-- Social Links -->
-        <div class="footer-social-section">
-          <div class="social-header">
-            <h4>Let's Connect</h4>
-            <p>Follow my journey and connect professionally</p>
-          </div>
-
-          <div class="social-links">
-            <a href="https://github.com/Karan1674" target="_blank" class="social-link github"><i
-                data-lucide="github"></i><span>GitHub</span></a>
-            <a href="https://www.linkedin.com/in/karanjit-singh-dev" target="_blank" class="social-link linkedin"><i
-                data-lucide="linkedin"></i><span>LinkedIn</span></a>
-            <a href="https://x.com/The_Karan1674" target="_blank" class="social-link twitter"><i
-                data-lucide="twitter"></i><span>Twitter</span></a>
-          </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-          <div class="footer-bottom-content">
-            <div class="copyright">
+        <div class="testimonials-slider">
+          <!-- FEATURED CARD -->
+          <div class="testimonial-card featured">
+            <div class="testimonial-quote">
+              <i data-lucide="quote"></i>
               <p>
-                © <span id="copyright-year"></span> <strong>Karanjit Singh</strong>. All rights reserved.
-              </p>
-              <p class="tagline">
-                Designed & Developed with 💜 using modern web technologies.
+                "Karanjit demonstrates exceptional problem-solving ability and a
+                deep understanding of full stack development. He approaches
+                challenges with clarity, writes clean and scalable code, and
+                consistently delivers solutions that are both technically strong
+                and user-focused. His dedication, communication skills, and
+                commitment to excellence make him a highly reliable developer to
+                work with."
               </p>
             </div>
 
-            <div class="footer-extra">
-              <span class="footer-location">
-                <i data-lucide="map-pin"></i> Punjab, India
-              </span>
-              <span class="footer-separator">•</span>
-              <span class="footer-status">
-                <span class="status-dot"></span> Available for Work
-              </span>
+            <div class="testimonial-rating">
+              <div class="stars">
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+                <i data-lucide="star" class="star filled"></i>
+              </div>
+            </div>
+
+            <div class="testimonial-author">
+              <div class="author-avatar icon-avatar">
+                <i data-lucide="user"></i>
+              </div>
+              <div class="author-info">
+                <h4>Senior Technical Internship Mentor</h4>
+                <p>Full Stack Development Guide</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- OTHER CARDS -->
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <i data-lucide="quote"></i>
+                <p>
+                  “Among the top-performing students in the department, Karanjit
+                  consistently shows strong analytical thinking and practical
+                  implementation skills in software development.”
+                </p>
+              </div>
+
+              <div class="testimonial-rating">
+                <div class="stars">
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                </div>
+              </div>
+
+              <div class="testimonial-author compact">
+                <div class="author-avatar icon-avatar small">
+                  <i data-lucide="user"></i>
+                </div>
+                <div class="author-info">
+                  <h5>University Professor</h5>
+                  <p>Computer Science Department</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <i data-lucide="quote"></i>
+                <p>
+                  “Helped build multiple academic and personal projects
+                  including web applications for classmates and guidance support
+                  for patent documentation work. A reliable and dedicated team
+                  contributor.”
+                </p>
+              </div>
+
+              <div class="testimonial-rating">
+                <div class="stars">
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                </div>
+              </div>
+
+              <div class="testimonial-author compact">
+                <div class="author-avatar icon-avatar small">
+                  <i data-lucide="user"></i>
+                </div>
+                <div class="author-info">
+                  <h5>Project Collaborator</h5>
+                  <p>Academic Project Partner</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <i data-lucide="quote"></i>
+                <p>
+                  "Professional communication, timely delivery, and clean code.
+                  The final result worked exactly as expected. Communication was
+                  clear and the project was completed on time.”
+                </p>
+              </div>
+
+              <div class="testimonial-rating">
+                <div class="stars">
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                  <i data-lucide="star" class="star filled"></i>
+                </div>
+              </div>
+
+              <div class="testimonial-author compact">
+                <div class="author-avatar icon-avatar small">
+                  <i data-lucide="user"></i>
+                </div>
+                <div class="author-info">
+                  <h5>Freelance Client</h5>
+                  <p>Web Application Project</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STATS -->
+          <div class="testimonials-stats">
+            <!-- Happy Clients – animate to 2+ -->
+            <div class="testimonial-stat-item">
+              <div
+                class="testimonial-stat-number counter"
+                data-target="2"
+                data-suffix="+"
+              >
+                0
+              </div>
+              <div class="testimonial-stat-label">Happy Clients</div>
+            </div>
+
+            <!-- Average Rating – animate to 4.9 -->
+            <div class="testimonial-stat-item">
+              <div class="testimonial-stat-number counter" data-target="4.9">
+                0.0
+              </div>
+              <div class="testimonial-stat-label">Average Rating</div>
+            </div>
+
+            <!-- Project Success – animate to 100% -->
+            <div class="testimonial-stat-item">
+              <div
+                class="testimonial-stat-number counter"
+                data-target="100"
+                data-suffix="%"
+              >
+                0
+              </div>
+              <div class="testimonial-stat-label">Project Success</div>
+            </div>
+
+            <!-- Support – no animation, keep static -->
+            <div class="testimonial-stat-item">
+              <div class="testimonial-stat-number">24/7</div>
+              <div class="testimonial-stat-label">Support</div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </section>
+    </section>
 
-  <script>lucide.createIcons();</script>
-  <script src="js/shared.js"></script>
-  <script src="js/theme.js"></script>
-  <script src="js/preloader.js"></script>
-  <script src="js/navbar.js"></script>
-  <script src="js/3d-models/monitor.js"></script>
-  <script src="js/3d-models/keyboard.js"></script>
-  <script src="js/3d-models/mouse.js"></script>
-  <script src="js/3d-models/cpu.js"></script>
-  <script src="js/hero-3d.js"></script>
-  <script src="js/cursor.js"></script>
-  <script src="js/notifications.js"></script>
-  <script src="js/scrolling.js"></script>
-  <script src="js/interactive.js"></script>
-  <script src="js/optimizations.js"></script>
-  <script src="js/main.js"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="professional-badge-section">Get In Touch</div>
+          <h2 class="section-title">Let’s Work Together</h2>
+          <p class="section-subtitle">
+            Have a project in mind? I’d love to hear about it and help bring
+            your ideas to life.
+          </p>
+        </div>
 
+        <div class="contact-container">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>karanjitsingh.dev@gmail.com</p>
+              </div>
+            </div>
 
-</body>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p>Available Upon Request</p>
+              </div>
+            </div>
 
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Punjab, India</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="globe"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Availability</h4>
+                <p>Open to Remote & Global Opportunities</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i data-lucide="clock"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Response Time</h4>
+                <p>Within 12 – 24 Hours</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                class="form-input"
+                placeholder="Your Full Name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                class="form-input"
+                placeholder="your.email@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Project Type</label>
+              <input
+                type="text"
+                name="project"
+                class="form-input"
+                placeholder="Web App, Portfolio, Dashboard, etc."
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Project Details</label>
+              <textarea
+                name="message"
+                class="form-textarea"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- Hidden date field -->
+            <input type="hidden" name="date" id="date" />
+
+            <!-- Honeypot spam protection -->
+            <input
+              type="text"
+              name="website"
+              id="website"
+              style="display: none"
+            />
+
+            <button type="submit" class="form-button">
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+      <!-- Footer Header with CTA -->
+      <div class="footer-header">
+        <div class="footer-cta">
+          <h3>Ready to Build Something Amazing?</h3>
+          <p>
+            Let's turn your vision into a digital reality. Get in touch for a
+            consultation.
+          </p>
+          <a href="#contact" class="footer-cta-button">
+            <span>Start Your Project</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <!-- Footer Main Content -->
+          <div class="footer-content">
+            <!-- Brand -->
+            <div class="footer-section footer-brand">
+              <div class="brand-info">
+                <h4>Karanjit Singh</h4>
+                <p class="brand-tagline">Full-Stack Developer</p>
+                <p class="brand-description">
+                  Passionate Full-Stack Developer specializing in MERN stack,
+                  REST APIs, database design, and modern responsive UI
+                  development.
+                </p>
+              </div>
+
+              <div class="footer-contact-info">
+                <div class="contact-item">
+                  <i data-lucide="mail"></i>
+                  <span>karanjitsingh.dev@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                  <i data-lucide="map-pin"></i>
+                  <span>Punjab, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+              <h4>Quick Links</h4>
+              <div class="footer-links">
+                <a href="#home" class="footer-link"
+                  ><i data-lucide="home"></i><span>Home</span></a
+                >
+                <a href="#about" class="footer-link"
+                  ><i data-lucide="user"></i><span>About</span></a
+                >
+                <a href="#skills" class="footer-link"
+                  ><i data-lucide="code"></i><span>Skills</span></a
+                >
+                <a href="#projects" class="footer-link"
+                  ><i data-lucide="folder"></i><span>Projects</span></a
+                >
+
+                <a href="#freelance" class="footer-link">
+                  <i data-lucide="briefcase"></i>
+                  <span>Freelance</span>
+                </a>
+                <a href="#contact" class="footer-link"
+                  ><i data-lucide="message-circle"></i><span>Contact</span></a
+                >
+              </div>
+            </div>
+
+            <div class="footer-section">
+              <h4>Services</h4>
+              <div class="footer-links">
+                <a href="#" class="footer-link">
+                  <i data-lucide="layout"></i>
+                  <span>Custom Website Development</span>
+                </a>
+
+                <a href="#" class="footer-link">
+                  <i data-lucide="server"></i>
+                  <span>Full-Stack Web Applications</span>
+                </a>
+
+                <a href="#" class="footer-link">
+                  <i data-lucide="database"></i>
+                  <span>Database Design & Integration</span>
+                </a>
+
+                <a href="#" class="footer-link">
+                  <i data-lucide="link"></i>
+                  <span>API Development & Integration</span>
+                </a>
+
+                <a href="#" class="footer-link">
+                  <i data-lucide="shopping-cart"></i>
+                  <span>E-Commerce Solutions</span>
+                </a>
+
+                <a href="#" class="footer-link">
+                  <i data-lucide="zap"></i>
+                  <span>Performance Optimization</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="footer-social-section">
+            <div class="social-header">
+              <h4>Let's Connect</h4>
+              <p>Follow my journey and connect professionally</p>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="https://github.com/Karan1674"
+                target="_blank"
+                class="social-link github"
+                ><i data-lucide="github"></i><span>GitHub</span></a
+              >
+              <a
+                href="https://www.linkedin.com/in/karanjit-singh-dev"
+                target="_blank"
+                class="social-link linkedin"
+                ><i data-lucide="linkedin"></i><span>LinkedIn</span></a
+              >
+              <a
+                href="https://x.com/The_Karan1674"
+                target="_blank"
+                class="social-link twitter"
+                ><i data-lucide="twitter"></i><span>Twitter</span></a
+              >
+            </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+            <div class="footer-bottom-content">
+              <div class="copyright">
+                <p>
+                  © <span id="copyright-year"></span>
+                  <strong>Karanjit Singh</strong>. All rights reserved.
+                </p>
+                <p class="tagline">
+                  Designed & Developed with 💜 using modern web technologies.
+                </p>
+              </div>
+
+              <div class="footer-extra">
+                <span class="footer-location">
+                  <i data-lucide="map-pin"></i> Punjab, India
+                </span>
+                <span class="footer-separator">•</span>
+                <span class="footer-status">
+                  <span class="status-dot"></span> Available for Work
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="js/shared.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/3d-models/monitor.js"></script>
+    <script src="js/3d-models/keyboard.js"></script>
+    <script src="js/3d-models/mouse.js"></script>
+    <script src="js/3d-models/cpu.js"></script>
+    <script src="js/hero-3d.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/scrolling.js"></script>
+    <script src="js/interactive.js"></script>
+    <script src="js/optimizations.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
