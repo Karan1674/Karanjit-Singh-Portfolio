@@ -22,6 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (window.lucide) lucide.createIcons();
 
-    console.log('Portfolio initialized ✓');
+    console.log('Portfolio initialized');
 
 });
